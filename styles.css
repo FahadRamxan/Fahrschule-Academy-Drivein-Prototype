@@ -709,6 +709,41 @@ body {
     display: none !important;
 }
 
+/* Hide ElevenLabs Branding */
+elevenlabs-convai *:contains("Powered by ElevenLabs"),
+elevenlabs-convai *:contains("ElevenLabs agents"),
+elevenlabs-convai [class*="footer"],
+elevenlabs-convai [class*="branding"],
+elevenlabs-convai [class*="powered"],
+elevenlabs-convai div:contains("Powered by"),
+elevenlabs-convai span:contains("Powered by"),
+elevenlabs-convai p:contains("Powered by"),
+elevenlabs-convai small:contains("Powered by"),
+elevenlabs-convai a[href*="elevenlabs"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Target ElevenLabs widget footer elements */
+elevenlabs-convai > div:last-child,
+elevenlabs-convai [style*="bottom"],
+elevenlabs-convai [style*="position: absolute"]:last-child,
+elevenlabs-convai [style*="position: fixed"]:last-child {
+    display: none !important;
+}
+
+/* Hide any text containing ElevenLabs */
+elevenlabs-convai * {
+    font-size: 0 !important;
+}
+
+elevenlabs-convai *:not(:contains("Powered by")):not(:contains("ElevenLabs")) {
+    font-size: initial !important;
+}
+
 /* Welcome Screen Styling */
 #n8n-chat [data-chat="welcome"] {
     background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%) !important;
